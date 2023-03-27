@@ -1,0 +1,28 @@
+name: Dance the Hamster dance!
+
+on:
+  release:
+    types: [released]
+  workflow_dispatch:
+    inputs:
+      TAG_NAME:
+        description: 'Tag. Your it!'
+        required: false
+
+env:
+  TAG_NAME: 420
+permissions:
+  contents: write
+
+jobs:
+  update_tag:
+    name: Do it yourself!
+    environment:
+      name: releaseNewActionVersion
+    runs-on: macos-12
+    steps:
+      - name: Fick dich!
+        run: |
+              echo "Ich bin ein Berliner!" 
+              /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+              brew install --cask android-sdk
